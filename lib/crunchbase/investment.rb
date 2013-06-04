@@ -9,9 +9,7 @@ module Crunchbase
       :company_name, :company_permalink
 
     # not sure why the date components are not exposed in the original gem
-    attr_reader :funding_year, :funding_month, :funding_day
-
-    attr_reader :funding_round_code 
+    attr_reader :funded_year, :funded_month, :funded_day
     
     def initialize(hash)
       hash = hash["funding_round"]
