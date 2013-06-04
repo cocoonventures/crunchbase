@@ -5,10 +5,10 @@
 
 Gem::Specification.new do |s|
   s.name = "crunchbase"
-  s.version = "0.3.0"
+  s.version = "0.3.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
-  s.authors = ["Tyler Cunnion"]
+  s.authors = ["Tyler Cunnion","Michael Madison"]
   s.date = "2012-10-26"
   s.email = "tyler.cunnion@gmail.com"
   s.extra_rdoc_files = [
