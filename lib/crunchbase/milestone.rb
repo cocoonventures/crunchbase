@@ -2,7 +2,7 @@ module Crunchbase
     class Milestone
         attr_reader :description, :source_url, :source_text, 
             :source_description, :stoneable_type, :stoned_value,
-            :stoned_value_type, :stoned_acquirer
+            :stoned_value_type, :stoned_acquirer, :stoned_year, :stoned_month, :stoned_day
 
         include Crunchbase::DateMethods
         self.extend Crunchbase::ArrayFromList
