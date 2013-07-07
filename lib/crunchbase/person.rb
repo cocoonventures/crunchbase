@@ -10,22 +10,23 @@ module Crunchbase
     attr_reader :first_name, :last_name, :permalink, :crunchbase_url,
       :homepage_url, :birthplace, :twitter_username, :blog_url, :blog_feed_url,
       :affiliation_name, :created_at, :updated_at, :overview, :created_at, 
-      :updated_at, :image, :video_embeds, :external_links, :web_presences
+      :updated_at, :image, :video_embeds, :external_links, :web_presences, :degrees
 
     def self.find(first_name, last_name)
       get(API.permalink({first_name: first_name, last_name: last_name}, "people")["permalink"])
     end
     
     def initialize(json)
-      @first_name = json["first_name"]
-      @last_name = json["last_name"]
-      @permalink = json["permalink"]
-      @crunchbase_url = json["crunchbase_url"]
-      @homepage_url = json["homepage_url"]
-      @birthplace = json["birthplace"]
+      @first_name       = json["first_name"]
+      @last_name        = json["last_name"]
+      @permalink        = json["permalink"]
+      @crunchbase_url   = json["crunchbase_url"]
+      @homepage_url     = json["homepage_url"]
+      @birthplace       = json["birthplace"]
       @twitter_username = json["twitter_username"]
-      @blog_url = json["blog_url"]
-      @blog_feed_url = json["blog_feed_url"]
+      @blog_url         = json["blog_url"]
+      @blog_feed_url    = json["blog_feed_url"]
+      @degrees          = json["degrees"]
       @affiliation_name = json["affiliation_name"]
       @born_year = json["born_year"]
       @born_month = json["born_month"]
